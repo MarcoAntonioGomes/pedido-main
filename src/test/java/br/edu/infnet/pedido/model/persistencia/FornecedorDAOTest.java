@@ -1,6 +1,6 @@
 package br.edu.infnet.pedido.model.persistencia;
 
-import br.edu.infnet.pedido.model.entidade.Cliente;
+
 import br.edu.infnet.pedido.model.entidade.Fornecedor;
 import org.junit.Assert;
 import org.junit.Before;
@@ -55,10 +55,9 @@ public class FornecedorDAOTest {
 
     @Test
     public void testObterCliente() {
-        IDAO clienteDAO = new ClienteDAO();
-        List<Cliente> lista = clienteDAO.listarTodos();
-        Cliente cliente = (Cliente) clienteDAO.obter(lista.get(0).getCodigo());
-        Assert.assertNotNull(cliente);;
+        List<Fornecedor> fornecedores = fornecedorDAO.listarTodos();
+        Fornecedor fornecedor = (Fornecedor) fornecedorDAO.obter(fornecedores.get(0).getCodigo());
+        Assert.assertNotNull(fornecedor);
     }
 
 }
